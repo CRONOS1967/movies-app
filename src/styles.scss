@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/init.scss";
+@import "./styles/color.scss";
+@import "~primeflex/primeflex.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,300;1,400;1,500&display=swap');
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: $white;
+}
+a{
+  text-decoration: none;
+  color: $white;
+}
