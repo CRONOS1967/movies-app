@@ -3,6 +3,7 @@
 @import "./styles/color.scss";
 @import "~primeflex/primeflex.css";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 body {
   font-family: 'Ubuntu', sans-serif;
   color: $white;
@@ -11,4 +12,28 @@ body {
 a{
   text-decoration: none;
   color: $white;
+}
+.icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }

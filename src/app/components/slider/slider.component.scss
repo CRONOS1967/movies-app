@@ -1,0 +1,77 @@
+@import "../../../styles/color.scss";
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35rem;
+  //   color: #999;
+  // background-color: #000;
+  position: relative;
+  .slide {
+    position: relative;
+    display: flex;
+    height: 40rem;
+    &-bg {
+      position: relative;
+      display: flex;
+      flex: 1 1 auto;
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        content: "";
+        background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(255, 255, 255, 0.024247198879551846) 88%
+        );
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-pane {
+      position: absolute;
+      width: 45%;
+      top: 15rem;
+      left: 10rem;
+      .name {
+        font-size: 2.9rem;
+      }
+      .meta {
+        font-size: 1.5rem;
+        color: $lightyellow;
+
+        .info {
+            display: flex;
+          > span {
+            &:not(:last-child):after {
+              content: "|";
+              margin: auto 9px auto 9px;
+            }
+          }
+          .rating{
+              display: flex;
+              align-items: center;
+              .icons{
+                  color: #d4af37;
+          }
+          &-value{
+              color: $white;
+              font-size: larger;
+          }
+          }
+        }
+      }
+      .desc{
+          font-size: 1.1rem;
+          line-height: 1.7rem;
+      }
+    }
+  }
+}
