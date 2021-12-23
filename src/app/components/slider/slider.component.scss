@@ -8,9 +8,10 @@
   // background-color: #000;
   position: relative;
   .slide {
-    position: relative;
+    position: absolute;
     display: flex;
     height: 40rem;
+    width: 100%;
     &-bg {
       position: relative;
       display: flex;
@@ -33,6 +34,8 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        // position:relative;
+    // clip:rect(0px,115px,115px,0px);
       }
     }
     &-pane {

@@ -1,32 +1,32 @@
 <div class="slider">
-  <div class="slide">
-    <div class="slide-bg">
-      <img
-        src="https://image.tmdb.org/t/p/original/VlHt27nCqOuTnuX6bku8QZapzO.jpg"
-        alt=""
-        srcset=""
-      />
-    </div>
-    <div class="slide-pane">
-      <h2 class="name">Spider-Man: No Way Home</h2>
-      <div class="meta">
-        <div class="info">
-          <span class="rating">
-            <span class="rating-value">
-              <span class="icons">star_rate</span>
-              7.5</span
-            ><span>/10</span>
-          </span>
-          <span>463 reviews</span>
-          <span>2021</span>
+  <ng-container *ngFor="let item of items; let i = index" >
+    <div class="slide" *ngIf="i==currentSlide" @fade>
+      <div class="slide-bg">
+        <img
+          src="https://image.tmdb.org/t/p/original/{{item.poster_path}}"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <div class="slide-pane">
+        <h2 class="name">{{item.title }} - {{ i }}</h2>
+        <div class="meta">
+          <div class="info">
+            <span class="rating">
+              <span class="rating-value">
+                <span class="icons">star_rate</span>
+                {{item.vote_average}}</span
+              ><span>/10</span>
+            </span>
+            <span>{{item.vote_count}} reviews</span>
+            <span>{{item.release_date | date: 'yyyy'}}</span>
+          </div>
+        </div>
+        <div class="desc mt-4">
+          {{item.overview}}
         </div>
       </div>
-      <div class="desc mt-4">
-        Peter Parker is unmasked and no longer able to separate his normal life
-        from the high-stakes of being a super-hero. When he asks for help from
-        Doctor Strange the stakes become even more dangerous, forcing him to
-        discover what it truly means to be Spider-Man.
-      </div>
     </div>
-  </div>
+  </ng-container>
+ 
 </div>
